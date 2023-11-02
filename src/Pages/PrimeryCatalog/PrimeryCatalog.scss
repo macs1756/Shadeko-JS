@@ -1,0 +1,10 @@
+
+@import '../../Sass/mixin.scss';
+
+.primeryCatalog{
+	@include adaptiv-value(margin-top,40,20,1);
+	
+	h3{
+		display: none;
+	}
+}

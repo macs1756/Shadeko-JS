@@ -1,0 +1,8 @@
+	@import '../../Sass/mixin.scss';
+
+	
+ .collection-single{
+	.catalog__net{
+		@include adaptiv-value(margin-bottom,60,20,1);	
+	}
+ }

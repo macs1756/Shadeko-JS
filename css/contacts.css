@@ -1,0 +1,138 @@
+.contacts {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 1920px) {
+  .contacts {
+    margin-top: calc(10px + 50 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 1920px) {
+  .contacts {
+    margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1920));
+  }
+}
+
+.contacts__net {
+  display: flex;
+  gap: 16px;
+  padding-top: 10px;
+}
+@media (max-width: 767px) {
+  .contacts__net {
+    flex-direction: column;
+  }
+}
+
+.contacts__net-map {
+  flex: 0 1 50%;
+  position: relative;
+  padding-top: 36%;
+}
+@media (max-width: 767px) {
+  .contacts__net-map {
+    padding-top: 0%;
+    height: 300px;
+  }
+}
+.contacts__net-map iframe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .contacts__net-map iframe {
+    position: relative;
+    height: 300px;
+  }
+}
+
+.contacts__net-text {
+  flex: 0 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .contacts__net-text {
+    margin-top: 10px;
+  }
+}
+.contacts__net-text section {
+  text-align: center;
+  max-width: 60%;
+  margin-bottom: 16px;
+  font-size: 22px;
+  line-height: 130%;
+}
+@media (max-width: 1920px) {
+  .contacts__net-text section {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 1920));
+  }
+}
+.contacts__net-text section span {
+  font-size: 20px;
+}
+@media (max-width: 1920px) {
+  .contacts__net-text section span {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 1920));
+  }
+}
+.contacts__net-text section b {
+  margin-right: 5px;
+}
+@media (max-width: 480px) {
+  .contacts__net-text section {
+    max-width: 100%;
+  }
+}
+.contacts__net-text button {
+  background-color: #454547;
+  color: #fff;
+  margin-top: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s linear;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (max-width: 1920px) {
+  .contacts__net-text button {
+    padding-top: calc(4px + 12 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 1920px) {
+  .contacts__net-text button {
+    padding-bottom: calc(4px + 12 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 1920px) {
+  .contacts__net-text button {
+    padding-left: calc(16px + 24 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 1920px) {
+  .contacts__net-text button {
+    padding-right: calc(16px + 24 * ((100vw - 320px) / 1920));
+  }
+}
+@media (any-hover: hover) {
+  .contacts__net-text button:hover {
+    transition: all 0.3s linear;
+    background-color: #33332e;
+  }
+}
+@media (max-width: 420px) {
+  .contacts__net-text button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+}

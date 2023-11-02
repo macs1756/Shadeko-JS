@@ -1,0 +1,216 @@
+@import './../../Sass/mixin.scss';
+
+
+
+.login,
+.register {
+	@include adaptiv-value(margin-top, 100, 20, 1);
+	@include adaptiv-value(margin-bottom, 100, 20, 1);
+}
+
+
+.login__body {
+	@include adaptiv-value(padding, 60, 20, 1);
+
+	background-color: rgba(41, 41, 41, 0.8);
+	max-width: 70%;
+	@include adaptiv-value(border-radius, 60, 20, 1);
+	width: 100%;
+
+	@media (max-width: 767px) {
+		max-width: 100%;
+	}
+}
+
+.login__main {
+	h2 {
+		color: #fff;
+		font-weight: 400;
+		@include adaptiv-value(font-size, 36, 16, 1);
+		padding-right: 10px;
+	}
+
+	max-width: 75%;
+	margin: auto;
+
+	@media (max-width: 600px) {
+		max-width: 100%;
+	}
+
+
+
+	input {
+		@include adaptiv-value(border-radius, 60, 20, 1);
+		background-color: #fff;
+		margin-bottom: 20px;
+		@include adaptiv-value(padding-left, 24, 8, 1);
+		width: 100%;
+		@include adaptiv-value(height, 60, 40, 1);
+		@include adaptiv-value(font-size, 24, 18, 1);
+
+		&::placeholder {
+			color: rgba(41, 41, 41, 0.8);
+		}
+	}
+
+}
+
+.login__register {
+	background-color: #fff;
+
+
+
+	@media(any-hover: hover) {
+		&:hover {
+			background-color: #F5F5F5;
+			transition: all 0.3s linear;
+
+		}
+	}
+
+
+}
+
+
+.login__register,
+.login__check-button {
+	@include adaptiv-value(border-radius, 60, 20, 1);
+	@include adaptiv-value(padding-left, 32, 20, 1);
+	@include adaptiv-value(padding-right, 32, 20, 1);
+	@include adaptiv-value(padding-top, 16, 8, 1);
+	@include adaptiv-value(font-size, 28, 14, 1);
+	@include adaptiv-value(padding-bottom, 16, 8, 1);
+	font-weight: 500;
+	transition: all 0.3s linear;
+}
+
+.login__main-first {
+	margin-bottom: 16px;
+}
+
+.login__check-button {
+	background-color: #292929;
+	color: #fff;
+	max-width: 40%;
+	width: 100%;
+
+	@media (max-width: 420px) {
+		max-width: 100%;
+		font-size: 18px;
+	}
+
+	@media(any-hover: hover) {
+		&:hover {
+			background-color: #33332e;
+		}
+	}
+
+
+}
+
+.login__check {
+	color: #fff;
+
+	input {
+		margin-bottom: 0;
+		margin-right: 8px;
+	}
+
+	input {
+		@include adaptiv-value(width, 24, 18, 1);
+	}
+
+	@media (max-width: 420px) {
+		flex-direction: column;
+
+	}
+}
+
+.login__check {
+	@media (max-width: 420px) {
+		align-items: flex-start !important;
+	}
+
+}
+
+
+.register__checkbox {
+	padding-right: 3%;
+	color: #fff;
+
+	input {
+		margin-right: 8px;
+	}
+
+	section:first-child {
+		margin-bottom: 12px;
+	}
+
+}
+
+input {
+	border: 2px solid transparent;
+	transition: all 0.3s linear;
+
+}
+
+input.invalid {
+	border: 2px solid red;
+	transition: all 0.3s linear;
+
+}
+
+.login__check-button:disabled {
+	opacity: 0.4;
+	transition: all 0.3s linear;
+
+}
+
+.logIn__invalid {
+	width: 250px;
+	position: fixed;
+	bottom: 6%;
+	right: 2%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 16px;
+	cursor: pointer;
+	border-radius: 5px;
+	transform: translateX(60%);
+	opacity: 0;
+	transition: all 0.4s linear;
+	pointer-events: none;
+	z-index: 99999999;
+	img {
+		@include adaptiv-value(width, 40, 20, 1);
+		margin-right: 8px;
+	}
+
+	p {
+		color: #fff;
+		font-weight: 500;
+		font-size: 18px;
+	}
+
+	background-color: #474745;
+
+	@media (max-width: 480px){
+		bottom: 83%;
+		right: 50%;
+		transform: translate(50%,-10%);
+	}
+	
+}
+
+.logIn__invalid.active{
+	transition: all 0.4s linear;
+	transform: translateX(0);
+	opacity: 1;
+	pointer-events: all;
+
+	@media (max-width: 480px){
+		transform: translate(50%, 0);	
+	}
+	
+}

@@ -1,0 +1,243 @@
+@import './../../Sass/mixin.scss';
+
+
+.profile {
+	display: grid;
+	grid-template-columns: 0.2fr 0.8fr;
+	@include adaptiv-value(gap, 38, 20, 1);
+	@include adaptiv-value(margin-top, 40, 20, 1);
+	@include adaptiv-value(margin-bottom, 80, 60, 1);
+
+
+	@media (max-width: 992px) {
+		grid-template-columns: 0.3fr 0.7fr;
+	}
+
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+
+
+	input[type="text"],
+	textarea {
+		border: 1px solid #B3B3B3;
+		@include adaptiv-value(border-radius, 20, 5, 1);
+		@include adaptiv-value(height, 60, 32, 1);
+		width: 100%;
+		padding-left: 10px;
+		@include adaptiv-value(font-size, 18, 14, 1);
+
+	}
+
+	textarea {
+		@include adaptiv-value(height, 120, 60, 1);
+	}
+
+	label {
+		display: block;
+		line-height: 170%;
+		color: rgba(0, 0, 0, 0.8);
+	}
+
+	section {
+		margin-bottom: 20px;
+	}
+
+}
+
+
+
+.profile__logo {
+	position: relative;
+	border-radius: 50%;
+	overflow: hidden;
+	@include adaptiv-value(width, 120, 40, 1);
+	@include adaptiv-value(height, 120, 40, 1);
+	margin-bottom: 16px;
+
+	.main {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+
+.profile__greeting {
+	@include adaptiv-value(font-size, 20, 16, 1);
+	@include adaptiv-value(margin-bottom, 40, 20, 1);
+
+}
+
+.profile__tabs {
+
+	button,
+	a {
+		display: block;
+		text-align: left;
+		transition: all 0.3s linear;
+		color: rgba(0, 0, 0, 0.7);
+		@include adaptiv-value(font-size, 27, 18, 1);
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	button.active {
+		color: #000;
+		font-weight: 700;
+		text-decoration: underline;
+
+
+
+	}
+}
+
+.profile__ardess {
+	gap: 16px;
+}
+
+.profile__ardess-item {
+	flex: 0 1 50%;
+
+	h4 {
+		font-weight: 700;
+		@include adaptiv-value(font-size, 25, 18, 1);
+
+	}
+
+	p {
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+
+	.button {
+
+		font-weight: 700;
+		@include adaptiv-value(font-size, 18, 14, 1);
+
+		@media(any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+	}
+
+}
+
+.account__details-replace {
+	background-color: #474745;
+	color: #fff;
+	@include adaptiv-value(border-radius, 15, 5, 1);
+	padding: 12px 24px;
+	@include adaptiv-value(font-size, 20, 16, 1);
+
+}
+
+.account-names {
+	gap: 16px;
+}
+
+.account__names-item {
+	flex: 0 1 50%;
+}
+
+.profile__net {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px 12px;
+
+	@media (max-width: 992px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+}
+
+.mb {
+	margin-bottom: 36px;
+}
+
+.avatar__wr {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+
+
+	img,
+	input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	input {
+		opacity: 0;
+	}
+
+}
+
+.avatar__title {
+	margin-top: 36px;
+	@include adaptiv-value(font-size, 26, 18, 1);
+	margin-bottom: 10px;
+}
+
+.changePasswordError {
+	display: block;
+	color: red;
+	font-weight: 500;
+	padding: 3px 0;
+	font-size: 14px;
+	opacity: 0;
+	transition: all 0.3s linear;
+	max-width: 420px;
+}
+
+
+.changePasswordError.active {
+	opacity: 1;
+}
+
+.orders-empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.profile__net {
+	width: 100%;
+	height: 100%;
+}
+
+.profile__orders-empty {
+	
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+
+	a {
+		@media(any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	img {
+		width: 80px;
+	}
+}

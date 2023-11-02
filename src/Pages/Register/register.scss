@@ -1,0 +1,110 @@
+@import './../../Sass/mixin.scss';
+
+
+.register__body{
+	@include adaptiv-value(padding-top,60,20,1);
+	@include adaptiv-value(padding-bottom,60,20,1);
+
+	@include adaptiv-value(padding-left,40,8,1);
+	@include adaptiv-value(padding-right,40,8,1);
+
+	background-color: rgba(41, 41, 41, 0.8);
+	max-width: 70%;
+	@include adaptiv-value(border-radius,60,20,1);
+	width: 100%;
+
+	@media (max-width: 992px){
+		max-width: 100%;
+	}
+
+	.invalid__p{
+		color: rgb(199, 60, 60);
+		transition: all 0.3s linear;
+		
+	}
+}
+
+.login__main-first{
+	h2{
+		color: #fff;
+		font-weight: 400;
+		padding-right: 10px;
+		span{
+			font-weight: 700;
+		}
+	}
+}
+
+.register__net{
+		@include adaptiv-value(margin-bottom,40,20,1);
+		
+
+
+
+	input{
+		@include adaptiv-value(border-radius,60,20,1);
+		background-color: #fff;
+		//margin-bottom: 20px;
+		@include adaptiv-value(padding-left,24,8,1);
+		width: 100%;
+		@include adaptiv-value(height,70,40,1);
+		@include adaptiv-value(font-size,24,18,1);
+		border: 2px solid transparent;
+		&::placeholder{
+			color: rgba(41, 41, 41,0.8);
+		}
+	}
+
+	.invalid{
+		border: 2px solid red;
+	}
+	
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		@include adaptiv-value(column-gap,20,8,1);
+		@include adaptiv-value(row-gap,32,16,1);
+		
+		@media (max-width: 767px){
+			grid-template-columns: 1fr;
+
+		}
+		
+		
+}
+
+.register__checkbox{
+
+	.checkbox{
+		margin-right: 0;
+		min-width: 20px;
+		height: 20px;
+		display: block;
+		cursor: pointer;
+	}
+	p{
+		margin-left: 8px;
+		line-height: 130%;
+		transition: all 0.3s linear;
+		
+	}
+
+	@media (max-width: 600px){
+		flex-direction: column;
+	}
+	
+}
+
+.register__button{
+	@media (max-width: 767px){
+		flex-direction: column;
+		button{
+			max-width: 100%;
+			margin-top: 20px;
+			font-size: 18px;
+		}
+	}
+	
+	
+
+	
+}

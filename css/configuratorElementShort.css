@@ -1,0 +1,30 @@
+.short__wr {
+  margin-bottom: 16px;
+}
+.short__wr h4 {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+@media (max-width: 1920px) {
+  .short__wr h4 {
+    font-size: calc(16px + 10 * ((100vw - 320px) / 1920));
+  }
+}
+.short__wr ul {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px 8px;
+  flex-wrap: wrap;
+}
+.short__wr li {
+  border: 1px solid #454547;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.short__wr li.active {
+  background-color: #454547;
+  color: #fff;
+}

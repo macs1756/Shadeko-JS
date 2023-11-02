@@ -1,0 +1,51 @@
+@import './../../Sass/mixin.scss';
+
+
+.favorites__net{
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 2% 0.7%;
+	@media (max-width: 600px){
+		grid-template-columns: 1fr 1fr;
+	}
+	margin-bottom: 60px;
+	
+}
+
+.favorites h2{
+
+	margin-top: 20px;
+	font-weight: 400;
+	@include adaptiv-value(font-size,36,18,1);
+	@media (max-width: 600px){
+		margin-bottom: 10px;
+	}
+}
+
+.favorites__empty{
+	
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+
+	img{
+		@include adaptiv-value(width,120,60,1);
+		margin-bottom: 10px;
+		transition: all 0.3s linear;
+		
+		@media(any-hover: hover){&:hover{
+			transition: all 0.3s linear;
+			transform: scale(1.1);
+		}}
+		
+	}
+	h6{
+		@include adaptiv-value(font-size,24,18,1);
+		font-weight: 400;
+	}
+}

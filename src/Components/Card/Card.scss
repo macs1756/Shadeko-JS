@@ -1,0 +1,241 @@
+@import './../../Sass/mixin.scss';
+
+
+.card__img-wr {
+	position: relative;
+	width: 100%;
+	padding-top: 60%;
+	overflow: hidden;
+
+	@media (max-width: 480px) {
+		padding-top: 80%;
+	}
+
+	.main {
+		cursor: pointer;
+		position: absolute;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: all 0.3s linear;
+
+
+
+
+	}
+}
+
+.mobile__controls {
+	display: none !important;
+
+	@media (max-width: 600px) {
+		display: flex !important;
+	}
+
+}
+
+
+.card__controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999999;
+	background-color: #EEEEEE;
+	
+	transform: translateY(100%);
+	transition: all 0.3s linear;
+
+
+	button,
+	a {
+		transition: all 0.3s linear;
+		padding: 6px 5px;
+		font-weight: 500;
+		letter-spacing: normal;
+		width: 100%;
+		transition: all 0.3s linear;
+		text-align: center;
+		@include adaptiv-value(font-size, 17, 8, 1);
+		text-transform: uppercase;
+		height: 100%;
+
+		@media(any-hover: hover) {
+			&:hover {
+				transition: all 0.3s linear;
+				background-color: #dddddd;
+			}
+		}
+
+	}
+
+	a {
+		border-right: 1px solid rgba(71, 71, 69, 0.35);
+	}
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+
+}
+
+.card__controls.active {
+	transform: translateY(1%);
+	transition: all 0.3s linear;
+
+}
+
+.card {
+	@media(any-hover: hover) {
+		&:hover {
+
+			img.main {
+				transform: scale(1.06);
+				transition: all 0.3s linear;
+			}
+
+		}
+	}
+
+
+
+	h4 {
+		@include adaptiv-value(font-size, 20, 12, 1);
+		line-height: 120%;
+		font-weight: 400;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		color: rgba(0, 0, 0, 0.7);
+	}
+
+
+
+
+	h5,
+	.card__addToDrawer {
+		@include adaptiv-value(font-size, 20, 12, 1);
+		line-height: 120%;
+		font-weight: 700;
+		color: #000;
+	}
+
+	.card__addToDrawer {
+		text-transform: uppercase;
+		padding-top: 6px;
+		padding-bottom: 6px;
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+
+	}
+
+	h5 {
+		@media (max-width: 767px) {
+			font-weight: 400;
+		}
+
+	}
+
+}
+
+
+button.added,
+button.added:hover {
+	background-color: #474745;
+	color: #fff;
+}
+
+.favorite__button-mobile {
+	display: block;
+	@include adaptiv-value(font-size, 20, 12, 1);
+	line-height: 120%;
+	font-weight: 700;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: left;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
+.favorite__button-mobile.added {
+	background-color: transparent;
+	color: #000;
+}
+
+h5.old {
+	color: #6f6c6ccb;
+	position: relative;
+	display: inline-block;
+	font-weight: 400;
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: #6f6c6ccb;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: rotate(-18deg);
+	}
+}
+
+h5.new{
+	@include adaptiv-value(font-size, 26, 15, 1);
+	font-weight: 700;
+
+}
+
+.change-price{
+	gap: 8px;
+
+}
+
+.account__discount{
+      
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #fff;
+		z-index: 10000;
+		transform: rotate(135deg) translate(17%,58%);
+		@include adaptiv-value(width,100,50,1);
+		@include adaptiv-value(height,50,25,1);
+
+		border-top: 50px solid #8B0000;
+		border-right: 50px solid transparent;
+		border-bottom: 0 solid transparent;
+		border-left: 50px solid transparent;
+
+		@media (max-width: 600px){
+			border-top: 40px solid #8B0000;
+			border-right: 40px solid transparent;
+			border-bottom: 0 solid transparent;
+			border-left: 40px solid transparent;
+		}
+		
+	
+}
+
+.account__discount-text{
+			position: absolute;
+			color: #fff;
+			font-weight: 700;
+			z-index: 10001;
+			top: 0%;
+			left: 0%;
+			transform: rotate(-45deg) translate(-15%,70%);
+			font-size: 18px;
+			@media (max-width: 600px){
+				transform: rotate(-45deg) translate(-25%,45%);
+			}
+			
+}

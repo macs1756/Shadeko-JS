@@ -1,0 +1,91 @@
+
+@import '../../Sass/mixin.scss';
+
+.about{
+	@include adaptiv-value(margin-top,60,10,1);
+	@include adaptiv-value(margin-bottom,60,40,1);
+}
+
+.about__title, .contacts__title, .help__title, .payment__title{
+		margin-bottom: 20px;
+		@include adaptiv-value(font-size,36,24,1);
+		color: #454547;
+		line-height: 120%;	
+		font-weight: 700;
+}
+
+.about__net{
+		display: grid;
+		grid-template-columns: 0.4fr 0.6fr;
+		gap: 16px;
+		place-items: start start;
+		@media (max-width: 992px){
+			grid-template-columns: 1fr;
+		}
+		
+}
+
+.about__net-text{
+		p{
+			margin-bottom: 10px;
+			line-height: 120%;
+
+		}
+
+		button{
+			background-color: #454547;
+			color: #fff;
+			margin-top: 16px;
+			font-weight: 500;
+			border-radius: 5px;
+			font-size: 16px;
+			transition: all 0.3s linear;
+			@include adaptiv-value(padding-top,16,4,1);
+			@include adaptiv-value(padding-bottom,16,4,1);
+			@include adaptiv-value(padding-left,40,16,1);
+			@include adaptiv-value(padding-right,40,16,1);
+			@media(any-hover: hover){&:hover{
+				transition: all 0.3s linear;
+				background-color: #33332e;
+			}}
+
+			@media (max-width: 420px){
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 100%;
+			}
+			
+			
+			
+		}
+
+}
+
+
+.about__net-img{
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding-top: 67%;
+
+	img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.about__button-wrapper{
+
+	@media (max-width: 992px){
+		justify-content: flex-start !important;
+	}
+	
+	@media (max-width: 420px){
+		justify-content: center;
+	}
+	
+}

@@ -1,0 +1,14 @@
+.payment {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+@media (max-width: 1920px) {
+  .payment {
+    margin-top: calc(10px + 50 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 1920px) {
+  .payment {
+    margin-bottom: calc(40px + 20 * ((100vw - 320px) / 1920));
+  }
+}

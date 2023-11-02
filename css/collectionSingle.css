@@ -1,0 +1,8 @@
+.collection-single .catalog__net {
+  margin-bottom: 60px;
+}
+@media (max-width: 1920px) {
+  .collection-single .catalog__net {
+    margin-bottom: calc(20px + 40 * ((100vw - 320px) / 1920));
+  }
+}

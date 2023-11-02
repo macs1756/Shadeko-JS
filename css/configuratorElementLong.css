@@ -1,0 +1,74 @@
+.long-configuration {
+  max-width: 600px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.long-configuration svg {
+  width: 14px;
+}
+.long-configuration .default {
+  padding: 10px 8px;
+  border: 1px solid #474745;
+  transition: all 0.3s linear;
+}
+@media (any-hover: hover) {
+  .long-configuration .default:hover {
+    background-color: #474745;
+    color: #fff;
+  }
+  .long-configuration .default:hover svg path {
+    transition: all 0.3s linear;
+    fill: #fff;
+  }
+}
+.long-configuration .default svg path {
+  transition: all 0.3s linear;
+}
+.long-configuration .default.active svg {
+  transform: rotate(180deg);
+}
+.long-configuration .body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  border-top: 1px solid #474745;
+  width: 100%;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: all 0.3s linear;
+  pointer-events: none;
+}
+.long-configuration .body li.active {
+  background-color: #474745;
+  transition: all 0.3s linear;
+  color: #fff;
+}
+.long-configuration .body li {
+  font-weight: 500;
+  width: 100%;
+  background-color: #fff;
+  padding: 8px;
+  border: 1px solid #474745;
+  border-top: none;
+  transition: all 0.3s linear;
+  position: relative;
+}
+@media (any-hover: hover) {
+  .long-configuration .body li:hover {
+    background-color: #cbc8c8;
+  }
+}
+@media (any-hover: hover) {
+  .long-configuration li.active:hover {
+    background-color: #474745 !important;
+  }
+}
+.long-configuration .body.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+  transition: all 0.3s linear;
+}

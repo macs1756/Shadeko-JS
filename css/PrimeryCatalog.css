@@ -1,0 +1,11 @@
+.primeryCatalog {
+  margin-top: 40px;
+}
+@media (max-width: 1920px) {
+  .primeryCatalog {
+    margin-top: calc(20px + 20 * ((100vw - 320px) / 1920));
+  }
+}
+.primeryCatalog h3 {
+  display: none;
+}

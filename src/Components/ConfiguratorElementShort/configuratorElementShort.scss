@@ -1,0 +1,32 @@
+
+@import '../../Sass/mixin.scss';
+
+.short__wr{
+	margin-bottom: 16px;
+
+	h4 {
+		@include adaptiv-value(font-size, 26, 16, 1);
+		font-weight: 400;
+		margin-bottom: 12px;
+	}
+
+	ul{
+		display: flex;
+		align-items: flex-start;
+		gap: 12px 8px;
+		flex-wrap: wrap;
+	}
+
+	li{
+		border: 1px solid #454547;
+		padding: 6px 12px;
+		font-weight: 600;
+		cursor: pointer;
+		transition: all 0.3s linear;
+	}
+
+	li.active{
+		background-color: #454547;
+		color: #fff;
+	}
+}

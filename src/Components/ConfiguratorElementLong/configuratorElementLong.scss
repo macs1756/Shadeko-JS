@@ -1,0 +1,109 @@
+.long-configuration {
+
+	max-width: 600px;
+	margin-bottom: 16px;
+
+	font-weight: 500;
+	cursor: pointer;
+	position: relative;
+
+	svg {
+		width: 14px;
+	}
+
+
+	.default {
+		padding: 10px 8px;
+		border: 1px solid #474745;
+		transition: all 0.3s linear;
+
+		@media(any-hover: hover) {
+			&:hover {
+				background-color: #474745;
+				color: #fff;
+
+				svg {
+					path {
+						transition: all 0.3s linear;
+
+						fill: #fff;
+					}
+				}
+			}
+		}
+
+
+		svg {
+			path {
+				transition: all 0.3s linear;
+
+			}
+		}
+	}
+
+	.default.active {
+
+		svg {
+			transform: rotate(180deg);
+
+
+		}
+	}
+
+
+	.body {
+
+
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		border-top: 1px solid #474745;
+		width: 100%;
+		transform: translateY(-10px);
+		opacity: 0;
+		transition: all 0.3s linear;
+		pointer-events: none;
+
+		li.active {
+			background-color: #474745;
+			transition: all 0.3s linear;
+			color: #fff;
+		}
+
+
+		li {
+			font-weight: 500;
+			width: 100%;
+			background-color: #fff;
+			padding: 8px;
+			border: 1px solid #474745;
+			border-top: none;
+			transition: all 0.3s linear;
+			position: relative;
+
+			
+
+			@media(any-hover: hover){&:hover{
+				background-color: #cbc8c8;
+			}}
+			
+			
+	
+		}
+	}
+
+	li.active{
+		@media(any-hover: hover){&:hover{
+			background-color: #474745  !important;
+		}}
+	}
+
+	.body.active {
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: all;
+		transition: all 0.3s linear;
+
+	}
+}

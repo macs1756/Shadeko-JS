@@ -1,0 +1,15 @@
+
+
+
+
+
+const {data, loading, error}= useFetch(`http://localhost:1337/api/products?populate=*&[filters][type][$eq]=${title}`);
+
+
+{	
+				error ? "error on server" : (
+				loading ? "loading.." :
+				data.map((card) =>
+				<Card key={card.id} item={card} />)
+				)
+}

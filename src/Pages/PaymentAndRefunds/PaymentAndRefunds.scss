@@ -1,0 +1,35 @@
+@import '../../Sass/mixin.scss';
+
+.payment{
+	@include adaptiv-value(margin-top,60,10,1);
+	@include adaptiv-value(margin-bottom,60,40,1);
+	line-height: 130%;
+
+	p,li{
+		@include adaptiv-value(font-size,20,16,1);
+	}
+
+	li{
+		margin-bottom: 10px;
+	}
+
+	h5{
+		margin-bottom: 10px;
+		font-weight: 700;
+		@include adaptiv-value(font-size,24,18,1);
+		
+	}
+
+	.mb10{
+		margin-bottom: 10px;
+	}
+}
+
+.payment__p1, .payment__list-1, .payment__list-2{
+	@include adaptiv-value(margin-bottom,60,20,1);
+}
+
+
+.payment__finalPart-p1, .payment__finalPart-p2, .payment__finalPart-p3{
+	margin-bottom: 20px;
+}

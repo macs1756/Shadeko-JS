@@ -1,0 +1,11 @@
+.flooring__net {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+@media (max-width: 600px) {
+  .flooring__net {
+    margin-bottom: 30px;
+  }
+}

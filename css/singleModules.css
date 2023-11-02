@@ -1,0 +1,141 @@
+.modules__empty {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.modules {
+  margin-top: 10px;
+}
+
+.modules__wrapper {
+  width: 100%;
+  border: 1px solid rgba(71, 71, 69, 0.4);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modules__wrapper {
+  transition: all 0.3s linear;
+}
+.modules__wrapper .modal__wr {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.modules__wrapper .modal__wr .modal__body {
+  max-width: 600px;
+}
+.modules__wrapper .modal__wr .modal__body li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+.modules__wrapper .modal__wr .modal__body li:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #454547;
+}
+.modules__wrapper .product__quantity-counter {
+  padding-left: 24px;
+}
+.modules__wrapper .product__quantity-counter img {
+  width: 18px;
+}
+@media (max-width: 420px) {
+  .modules__wrapper .product__quantity-counter {
+    padding-left: 0px;
+  }
+}
+.modules__wrapper .modules__price {
+  flex: 1 1 auto;
+  text-align: center;
+}
+@media (max-width: 420px) {
+  .modules__wrapper .quantity__arrow {
+    display: block;
+  }
+}
+.modules__wrapper .modules__price {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media (max-width: 420px) {
+  .modules__wrapper .modules__img-wr {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.modules__wrapper.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.modules__img-wr {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 1920px) {
+  .modules__img-wr {
+    width: calc(30px + 50 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 1920px) {
+  .modules__img-wr {
+    height: calc(30px + 50 * ((100vw - 320px) / 1920));
+  }
+}
+
+.modules__characteristics button {
+  text-decoration: underline;
+}
+@media (any-hover: hover) {
+  .modules__characteristics button:hover {
+    text-decoration: none;
+  }
+}
+
+.modules__img-wr {
+  position: relative;
+  cursor: zoom-in;
+}
+.modules__img-wr:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../../../public/img/configurator__hover.png") center center no-repeat rgba(0, 0, 0, 0.767);
+  z-index: 2;
+  background-size: auto 70%;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+@media (any-hover: hover) {
+  .modules__img-wr:hover:after {
+    opacity: 1;
+    transition: all 0.3s linear;
+  }
+}
+
+.quantity__arrow {
+  pointer-events: all !important;
+}

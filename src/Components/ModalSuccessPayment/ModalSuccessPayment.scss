@@ -1,0 +1,46 @@
+
+
+
+.modal__successPayment {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h4{
+		font-size: 27px !important;
+		width: 100%;
+		margin-bottom: 32px !important;
+	}
+
+	h6{
+		line-height: 130%;
+		margin-bottom: 24px;
+		color: #454547;
+		font-size: 20px;
+		font-weight: 400;
+		
+	}
+
+	h6:last-child{
+		margin-bottom: 0;
+	}
+
+
+	b.copy{
+		color: #000;
+	   transition: all 0.3s linear;
+	}
+}
+
+.order__number{
+		margin-bottom: 24px;
+
+		h6{
+			margin-bottom: 0px;
+		}
+		img{
+			width: 24px;
+			margin-left: 8px;
+			cursor: pointer;
+		}
+}
